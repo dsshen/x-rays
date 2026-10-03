@@ -4,12 +4,6 @@
 
 [Watch the concert version on YouTube.](https://www.youtube.com/watch?v=nwrdy7rc-6Q)
 
-Are you a musician and want to generate these dank sounds yourself? If you have a DAW with VST and/or AU functionality (such as Ableton, Logic Pro, FL Studio, Cubase, etc.), you can! In the [PluginBuilds](https://github.com/dsshen/x-rays/tree/master/PluginBuilds) folder, you'll find VST and AU versions of the synth plugin used in this piece, which you can then install into your DAW of choice.
-
-Are you a chemist and want to know how I simulate the diffraction peaks? Check out the source code, particularly the file [PluginProcessor.h](https://github.com/dsshen/x-rays/blob/master/XRDPlugin/Source/PluginProcessor.h), for details. A good theoretical summary can be found [here](http://pd.chem.ucl.ac.uk/pdnn/diff2/dindex2.htm). In brief, I use structure factor to get the diffraction intensities (with lorentz-polarization correction) and generate sound by reading the intensity vs. 2-theta plot and mapping each peak to a sine wave (with 2-theta being mapped to Hz logarithmically). The parameters I use to change the sound are the unit-cell lengths (*a*, *b*, *c*) and angles (*α*, *β*, *γ*), as well as *λ*. Because the lattice parameters could potentially all be different, I compute the lattice spacing *d* using the triclinic case, since that reduces to all the other cases anyways.
-
-The synth plugin was bootstrapped using [JUCE](https://github.com/juce-framework/JUCE) and written in C++. The piece itself was arranged and mixed using [Logic Pro X](https://www.apple.com/logic-pro/).
-
 ## Concert notes from the Taplin performance
 
 **Humans love patterns. Our brains are hardwired to detect them, and our souls are energized by them.** Crystal chemists experience the thrill of symmetry when elucidating the structure of a new crystal, and musicians feel it when band members all lock into the same groove during a jam. That this same thrill can be experienced in such different contexts suggests something profound about how we’re all wired to think and feel, and this piece was written in part to investigate what on earth goes into that wiring.
